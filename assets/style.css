@@ -1,0 +1,321 @@
+/* =========================================================
+   平嶋静 税理士事務所（相続税専門） - 超シンプル版
+   - 編集しやすいように、CSSは1枚に集約しています。
+   ========================================================= */
+
+:root{
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555;
+  --border: #e6e6e6;
+  --brand: #0f3d6e;
+  --brand2:#2c7a7b;
+  --card:#f7f8fb;
+  --radius: 14px;
+  --max: 980px;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.8;
+}
+
+a{ color:inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding: 12px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width: 210px;
+}
+
+.logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #eef3ff;
+  border:1px solid #d7e2ff;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  color: var(--brand);
+}
+
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  line-height:1.25;
+}
+.brand-title strong{ font-size: 15px; letter-spacing:.02em; }
+.brand-title span{ font-size: 12px; color: var(--muted); }
+
+.nav{
+  margin-left: auto;
+  min-width: 0;
+}
+
+.nav ul{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  /* 改行で2段にならないように */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nav a{
+  display:inline-block;
+  padding: 10px 6px;
+  font-size: 14px;
+  line-height: 1.1;
+  white-space: nowrap; /* ←重要 */
+}
+
+.header-cta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space: nowrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border:1px solid var(--border);
+  background: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.btn:hover{ text-decoration:none; }
+
+.btn-primary{
+  background: var(--brand2);
+  border-color: var(--brand2);
+  color:#fff;
+}
+
+main{ padding: 24px 0 56px; }
+
+.hero{
+  padding: 34px 0 10px;
+}
+
+.hero-card{
+  border:1px solid var(--border);
+  background: linear-gradient(180deg, #f6fbff, #ffffff);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 22px;
+
+  /* 写真を重ねるため */
+  position: relative;
+  overflow: visible;
+}
+
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin: 0 0 10px 0;
+  padding:0;
+  list-style:none;
+}
+.badges li{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+h1{
+  margin: 10px 0 8px 0;
+  font-size: 26px;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+.lead{
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.card{
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 18px;
+}
+
+.card h2{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.card p{ margin: 0; color: var(--muted); }
+
+.kv{
+  display:grid;
+  gap: 6px;
+  margin:0;
+  padding:0;
+}
+.kv dt{
+  font-weight:700;
+}
+.kv dd{
+  margin:0;
+  color: var(--muted);
+}
+
+.list{
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+.list li{ margin: 6px 0; }
+
+.steps{
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+.steps li{ margin: 8px 0; }
+
+.notice{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+footer{
+  border-top: 1px solid var(--border);
+  padding: 18px 0 34px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* 2カラム（タブレット以上） */
+@media (min-width: 860px){
+  h1{ font-size: 32px; }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .brand{ min-width: 280px; }
+  .nav a{ font-size: 15px; }
+}
+
+/* スマホ：ナビが詰まる場合は横スクロール（2段化を防ぐ） */
+@media (max-width: 520px){
+  .brand{ min-width: 0; }
+  .nav ul{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav ul::-webkit-scrollbar{ display:none; }
+  .btn{ padding: 10px 12px; }
+}
+
+/* =========================================================
+   Hero：看板写真（右上に表示／透過なし）
+   - index.html の .hero-photo に画像を入れるだけでOK
+   - 画像ファイルは HTML の src（例：assets/img/kanban_lowReso.jpg）を差し替え
+   ========================================================= */
+
+.hero-photo{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: clamp(160px, 22vw, 260px);
+  max-width: 42%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.hero-photo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 画像の分だけ本文が被らないように右余白を確保 */
+@media (min-width: 860px){
+  .hero-card{
+    padding-right: 320px;
+  }
+}
+
+/* 画面が狭い時は画像を本文の下に回して安全に表示 */
+@media (max-width: 820px){
+  .hero-photo{
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 12px;
+    box-shadow: none;
+  }
+  .hero-card{
+    padding-right: 22px;
+  }
+}
