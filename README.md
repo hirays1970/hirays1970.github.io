@@ -6,15 +6,17 @@
 
 ## 編集する場所
 1. 対応するhtmlファイルを選択後、下の画像にある鉛筆のマークを押す
-<img width="904" height="424" alt="image" src="https://github.com/user-attachments/assets/37cfa5ef-81ae-4155-a7d3-7d12648cd8b4" />
+<img width="928" height="418" alt="image" src="https://github.com/user-attachments/assets/1a4da2df-3151-4027-ab44-98503d7b6df4" />
+
 
 2. 編集したい情報の部分を書き換える
 
 3. 編集が終わったら、Commit changes という緑のボタンをクリック
-   <img width="943" height="286" alt="image" src="https://github.com/user-attachments/assets/49a7a202-8692-4dd6-b05a-3796554b6b60" />
+<img width="925" height="255" alt="image" src="https://github.com/user-attachments/assets/bd7d7490-46fd-4625-8e7c-edb32e15e26e" />
 
 4. もう一回Commit changes という緑のボタンをクリック
-   <img width="388" height="611" alt="image" src="https://github.com/user-attachments/assets/8945aaa6-7852-498c-98f2-f00c8e977689" />
+<img width="497" height="511" alt="image" src="https://github.com/user-attachments/assets/dec6cede-f177-4c85-901e-8a3cd755ec8e" />
+
 
 これで変更が適用されているはずです。（反映には時間がかかります）
 
